@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreeCodeCamp - Basic Algorithm Challenge - Repeat a string</title>
+</head>
+<body>
+  <h1>Repeat a string</h1>
+  <p>Repeat a given string str (first argument) for num times (second argument). Return an empty string if num is not a positive number. For the purpose of this challenge, do not use the built-in .repeat() method.</p>
+  
+  <script>
+    function repeatStringNumTimes(str, num) {
+      let repeatedString = "";
+      for (let i = 1; i <= num; i++) {
+        repeatedString += str;
+      }
+      console.log(repeatedString);
+    }
+
+    repeatStringNumTimes("*", 3); // should return the string ***.
+    repeatStringNumTimes("abc", 3); // should return the string abcabcabc.
+    repeatStringNumTimes("abc", 4); // should return the string abcabcabcabc.
+    repeatStringNumTimes("abc", 1); // should return the string abc.
+    repeatStringNumTimes("*", 8); // should return the string ********.
+    repeatStringNumTimes("abc", -2); // should return an empty string ("").
+    // The built-in repeat() method should not be used.
+    repeatStringNumTimes("abc", 0); // should return "".
+  </script>
+</body>
+</html>
