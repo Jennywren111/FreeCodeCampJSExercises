@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreeCodeCamp - Basic Algorithm Challenge - COnvert sentence to title case</title>
+</head>
+<body>
+  <h1>Convert sentence to title case</h1>
+  <p>Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case. For the purpose of this exercise, you should also capitalize connecting words like the and of.
+</p>
+  
+  <script>
+    function titleCase(str) {
+      let strArray = str.split(" ");
+      let capitalised = [];
+      strArray.forEach(function(word) {
+        let firstLetter = word[0].toUpperCase(); 
+        let restOfWord = word.slice(1).toLowerCase();
+        capitalised.push(firstLetter + restOfWord);
+      });
+      return capitalised.join(" ");
+    }
+    titleCase("I'm a little tea pot");
+  </script>
+</body>
+</html>
