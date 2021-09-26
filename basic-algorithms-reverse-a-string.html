@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreeCodeCamp - Basic Algorithm Challenge - Reverse a string</title>
+</head>
+<body>
+  <h1>Reverse a string</h1>
+  <p>
+    Reverse the provided string.
+    You may need to turn the string into an array before you can reverse it.
+    Your result must be a string.
+  </p>
+  
+  <script>
+    function reverseString(str) {
+      let strArray = str.split("");
+      let reversedArray = [];
+      strArray.forEach(function(item) {
+        reversedArray.unshift(item);
+      });
+      console.log(reversedArray.join(""));
+    }
+
+    reverseString("hello"); // returns olleh
+
+  </script>
+</body>
+</html>

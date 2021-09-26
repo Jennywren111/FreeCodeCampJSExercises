@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreeCodeCamp - Basic Algorithm Challenge - Truncate a string</title>
+</head>
+<body>
+  <h1>Truncate a string</h1>
+  <p>
+    Truncate a string (first argument) if it is longer than the given maximum string length (second argument). Return the truncated string with a ... ending.</p>
+  
+  <script>
+    function truncateString(str, num) {
+      // Split string at num (slice? 0, num?) store as variable
+      // Return first part of split array plus '...'
+      // Will likely need some way to check the string is long enough to be truncated.
+      if (str.length > num) {
+        return str.slice(0, num) + "...";
+      }
+      else {
+        return str;
+      }
+    }
+
+    truncateString("A-tisket a-tasket A green and yellow basket", 8);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreeCodeCamp - Basic Algorithm Challenge - Confirm the Ending</title>
+</head>
+<body>
+  <h1>Confirm the Ending</h1>
+  <p>
+    Check if a string (first argument, str) ends with the given target string (second argument, target).
+    This challenge can be solved with the .endsWith() method, which was introduced in ES2015. But for the purpose of this challenge, we would like you to use one of the JavaScript substring methods instead.
+    </p>
+  
+  <script>
+    function confirmEnding(str, target) {
+      /*  // Curses. Nice try but nope. Works until the target appears more than once in str!
+      if (str.indexOf(target) === (str.length - target.length)) {
+        return true;
+      }
+      else {
+        return false;
+      }
+      */
+  
+      if (str.substr(str.length - target.length, target.length) === target) {
+        return true;
+      }
+      else {
+        return false;
+      }
+    }
+
+    confirmEnding("Bastian", "n");
+
+  </script>
+</body>
+</html>

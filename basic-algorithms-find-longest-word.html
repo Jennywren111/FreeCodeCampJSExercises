@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreeCodeCamp - Basic Algorithm Challenge - Find the Longest Word in a String</title>
+</head>
+<body>
+  <h1>Find the Longest Word in a String</h1>
+  <p>Return the length of the longest word in the provided sentence.</p>
+  
+  <script>
+    function findLongestWordLength(str) {
+      let strArray = str.split(" ");
+      let longestWord = 1;
+      for (let i = 0; i < strArray.length; i++) {
+        if (strArray[i].length >= longestWord) {
+          longestWord = strArray[i].length;
+        }
+      }
+      return longestWord;
+    }
+
+    findLongestWordLength("The quick brown fox jumped over the lazy dog");
+
+  </script>
+</body>
+</html>
