@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreeCodeCamp - Basic Algorithm Challenge - Slice and Splice</title>
+</head>
+<body>
+  <h1>Slice and Splice - insert one array into another at specified index.</h1>
+  <p>
+    You are given two arrays and an index.
+    Copy each element of the first array into the second array, in order.
+    Begin inserting elements at index n of the second array.
+    Return the resulting array. The input arrays should remain the same after the function runs.
+  </p>
+  
+  <script>
+    function frankenSplice(arr1, arr2, n) {
+      // split arr2 into two at index 'n'. 
+      // store each half in a different var
+      // add the first bit, then arr1 then second bit to a new array. 
+      // Ooh actually, can we use splice to do this? .splice(startIndex, amountToDelete, thingsToAdd);
+      // Hmm, okay so we need to copy arr2 in order to pass the test... My code feels a bit hacked. Need to review. Also, .flat() will not work if there are nested arrays being passed in, would need to specify depth level.
+      let spliced = [...arr2];
+      spliced.splice(n, 0, arr1);
+      return spliced.flat();
+    }
+    frankenSplice([1, 2, 3], [4, 5, 6], 1);
+  </script>
+</body>
+</html>
