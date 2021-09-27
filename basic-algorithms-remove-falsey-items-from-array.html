@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreeCodeCamp - Basic Algorithm Challenge - Remove falsey array values</title>
+</head>
+<body>
+  <h1>Remove falsey values from array.</h1>
+  <p>Remove all falsy values from an array.
+    Falsy values in JavaScript are false, null, 0, "", undefined, and NaN.
+    Hint: Try converting each value to a Boolean.
+  </p>
+  
+  <script>
+    function bouncer(arr) {
+      let truthyArray = arr.filter(x => x)
+      return truthyArray;
+    }
+    bouncer([7, "ate", "", false, 9]);
+  </script>
+</body>
+</html>
