@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreeCodeCamp - Basic Algorithm Challenge - Mutations - Does a string contain all the letters of another string</title>
+</head>
+<body>
+  <h1>Mutations - Does a string contain all the letters of another string</h1>
+    <p>Return true if the string in the first element of the array contains all of the letters of the string in the second element of the array.</p>
+    <p>For example, ["hello", "Hello"], should return true because all of the letters in the second string are present in the first, ignoring case.</p>
+    <p>The arguments ["hello", "hey"] should return false because the string hello does not contain a y.</p>
+    <p>Lastly, ["Alien", "line"], should return true because all of the letters in line are present in Alien.</p>
+  
+  <script>
+    function mutation(arr) {
+      // take each letter of arr[1] and check it doesn't return -1 when checking its indexOf in arr[0].
+      let arr1 = arr[0].toLowerCase();
+      let arr2 = arr[1].toLowerCase();
+      for (let i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) === -1) {
+          return false; 
+        }
+      }
+      return true;
+    }
+    mutation(["Hello", "hey"]);
+  </script>
+</body>
+</html>
