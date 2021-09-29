@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreeCodeCamp - Basic Algorithm Challenge - Divide array into groups of specifed size</title>
+</head>
+<body>
+  <h1>Chunky Monkey - divide an array into chunks of specified size</h1>
+    <p>
+      Write a function that splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array.
+      </p>
+  
+  <script>
+    function chunkArrayInGroups(arr, size) {
+     let newArray = [];
+      for (let i = 0; i < arr.length; i = i + size) {
+        newArray.push(arr.slice(i, i + size));
+      }
+      return newArray;
+    }
+    chunkArrayInGroups(["a", "b", "c", "d", "e", "f", "g"], 2);
+  </script>
+</body>
+</html>
